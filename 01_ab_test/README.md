@@ -22,8 +22,8 @@
 | 핵심 지표 | CVR = Download / Click |
 | 가드레일 지표 | 전시 Download |
 | 분석 도구 | SQL, Python |
-| 통계 검정 | Proportion Z-Test, Fisher Exact Test |
-
+| 주 검정 | Proportion Z-Test |
+| 보조 검증 | Fisher Exact Test |
 ---
 
 ## 2. Problem
@@ -121,7 +121,7 @@ Impression / Click / Download 집계
     ↓
 실험 기간 및 단말군 기준 매핑
     ↓
-Cross-over 기준을 반영하여 NAU / ARPU 그룹 재분류
+Cross-over 기준을 반영하여 NAU / ARPU 그룹 분류
     ↓
 국가별 성과 지표 계산
     ↓
@@ -170,16 +170,12 @@ Python에서는 추출 데이터를 기반으로:
 
 ### Proportion Z-Test
 
-표본이 충분한 구간에서는 이항분포의 정규근사를 이용한 **Proportion Z-Test**를 적용했습니다.
+각 집단의 성공 수(Download)와 실패 수(Click - Download)를 확인하여 정규근사 조건을 충족하는지 확인한 뒤, **Proportion Z-Test를 주 검정으로 적용**했습니다.
 
 ```text
 H0 : CVR_NAU = CVR_ARPU
 H1 : CVR_NAU > CVR_ARPU
 ```
-
-### Fisher Exact Test
-
-빈도가 낮은 구간에서도 결과를 확인할 수 있도록 **Fisher Exact Test를 함께 적용하여 검정 결과를 교차 확인**했습니다.
 
 유의수준은:
 
@@ -188,6 +184,10 @@ H1 : CVR_NAU > CVR_ARPU
 ```
 
 로 설정했습니다.
+
+### Fisher Exact Test
+
+**Proportion Z-Test 결과를 추가로 확인하기 위한 보조 검증으로 Fisher Exact Test를 적용**했습니다.
 
 ---
 
