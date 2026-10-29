@@ -45,3 +45,14 @@ SQL, Python, 통계 검정, KPI 설계 및 데이터 품질 관리 과정을 정
 [프로젝트 보기](./03_sessiontime_quality/)
 
 ---
+
+### 04. Full Engagement 기반 저성과 Cutoff 기준 수립
+
+`SQL` `Python` `EDA` `Percentile Analysis` `Policy Design`
+
+- Full Engagement 분포를 분석해 저성과 콘텐츠 기준 검토
+- 기존 **2,000 이하 기준의 적정성 검증** 및 Percentile 기반 Cutoff 산출
+- 하위 25% 기준값 **1,965**를 저성과 구간으로 정의
+- 동일 콘텐츠가 기준 이하 성과를 반복할 경우 재사용 우선순위를 낮추는 **3-Out 운영 기준 제안**
+
+[프로젝트 보기](./04_low_performance_cutoff/)
