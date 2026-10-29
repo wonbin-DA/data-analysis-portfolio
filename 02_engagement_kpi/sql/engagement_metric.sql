@@ -1,4 +1,3 @@
-```sql
 /*
 ===============================================================================
 Engagement KPI
@@ -279,4 +278,3 @@ WHERE full_engagement_user IS NOT NULL
    OR second_depth_engagement_user IS NOT NULL
 GROUP BY 1
 ORDER BY 1;
-```
