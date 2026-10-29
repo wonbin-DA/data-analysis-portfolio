@@ -1,11 +1,11 @@
-# Engagement KPI 설계 및 운영 지표화
+# 📐 Engagement KPI 설계 및 운영 지표화
 
 > 단순 방문자 수로는 설명하기 어려운 사용자 참여 수준을 행동 로그 기반으로 정의하고,  
 > **Full / 1Depth / 2Depth Engagement 지표를 설계하여 정기 성과 리포트에 반영한 프로젝트**
 
 ---
 
-## 1. Project Overview
+## 📌 1. Project Overview
 
 콘텐츠 전시 서비스는 사용자를 늘리고 반복적인 콘텐츠 탐색을 유도하는 것을 주요 목표로 운영되고 있었습니다.
 
@@ -28,7 +28,7 @@
 
 ---
 
-## 2. Problem & Design Approach
+## ❓ 2. Problem & Design Approach
 
 서비스 방문자 수인 AU는 전체 사용자 규모를 확인하기에는 유용하지만, **AU 증가가 곧 의미 있는 콘텐츠 참여 증가를 의미하지는 않습니다.**
 
@@ -77,7 +77,7 @@ flowchart LR
 
 ---
 
-## 3. Engagement KPI Definition
+## 🎯 3. Engagement KPI Definition
 
 1Depth와 2Depth에서 발생한 행동 조합을 기준으로 사용자를 **세 가지 Engagement 지표**로 구분했습니다.
 
@@ -129,7 +129,7 @@ flowchart LR
 
 ---
 
-## 4. Aggregation Logic
+## ⚙️ 4. Aggregation Logic
 
 Engagement KPI는 이벤트 발생 횟수가 아니라 **조건을 만족한 사용자 수**를 기준으로 설계했습니다.
 
@@ -182,7 +182,7 @@ COUNT(DISTINCT engagement_user)
 
 ---
 
-## 5. Stakeholder Validation
+## 🤝 5. Stakeholder Validation
 
 초기 Engagement 지표와 샘플 결과를 산출한 이후 고객사 담당자와 지표 정의 및 활용 방향을 검토했습니다.
 
@@ -233,7 +233,7 @@ Click까지 포함할 경우 Full Engagement와 정의가 중복될 가능성이
 
 ---
 
-## 6. Outcome
+## ✅ 6. Outcome
 
 Engagement KPI 설계를 통해 기존의 단순 방문자 중심 성과 측정을 **행동 기반 사용자 참여 지표 체계**로 확장했습니다.
 
@@ -273,25 +273,7 @@ Full Engagement / Service AU
 
 ---
 
-## 7. Repository Information
-
-### SQL
-
-1Depth / 2Depth 행동 통합 및 Full / 1Depth / 2Depth Engagement User 분류 로직
-
-### Metric Definition
-
-세 가지 Engagement KPI의 행동 조건 및 집계 기준
-
-### Sample Data
-
-분석 로직 재현을 위해 공개용으로 생성한 합성 이벤트 로그 데이터
-
-> 실제 회사 데이터, 고객사명, 내부 조직명, 사용자 식별자, 테이블명, 콘텐츠 ID 및 운영 관련 민감 정보는 포함하지 않습니다.
-
----
-
-## Tech Stack
+## 🛠 Tech Stack
 
 `SQL` `Amazon Athena` `Presto` `Event Log Analysis` `KPI Design` `User Segmentation` `Funnel Analysis`
 
