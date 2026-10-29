@@ -1,11 +1,11 @@
-# 운영 기준 전환 A/B Test
+# 🧪 운영 기준 전환 A/B Test
 
 > 기존 매출 중심 운영 기준과 신규 사용자 활성도 기반 기준을 비교하여,  
-> **Click → Download 전환율(CVR)과 다운로드 성과 개선 여부를 검증한 A/B Test 프로젝트**
+> **Click → Download 전환율(CVR)과 다운로드 성과 개선 여부를 검증한 A/B Test 진행**
 
 ---
 
-## 1. Project Overview
+## 📌 1. Project Overview
 
 글로벌 앱마켓 내 전시 영역은 콘텐츠 노출을 통한 다운로드 확대를 주요 목표로 운영되고 있었습니다.
 다만 실험 대상 구좌의 기존 앱리스트 선정 기준은 매출 지표 중심으로 구성되어 있어, 운영 목표와 선정 기준 간 정합성을 검토할 필요가 있었습니다.
@@ -26,7 +26,7 @@
 | 보조 검증 | Fisher Exact Test |
 ---
 
-## 2. Problem
+## ❓ 2. Problem
 
 전시 구좌의 운영 목표는 **다운로드 확대**였지만, 기존 앱리스트 선정 기준은 매출 관련 지표를 중심으로 구성되어 있었습니다.
 
@@ -50,7 +50,7 @@ NAU Ratio = NAU / AU
 
 ---
 
-## 3. Experiment Design
+## 🧪 3. Experiment Design
 
 단말군별 사용자 규모나 기본 행동 성향의 차이가 운영 기준의 효과로 해석되는 것을 줄이기 위해 **Cross-over 방식의 A/B Test**를 적용했습니다.
 
@@ -78,7 +78,7 @@ NAU Ratio = NAU / AU
 
 ---
 
-## 4. Metric Design
+## 🎯 4. Metric Design
 
 ### Primary Metric
 
@@ -108,7 +108,7 @@ IPM = Download / Impression × 1,000
 
 ---
 
-## 5. Data Processing
+## ⚙️ 5. Data Processing
 
 분석 과정은 크게 다음과 같이 구성했습니다.
 
@@ -164,7 +164,7 @@ Python에서는 추출 데이터를 기반으로:
 
 ---
 
-## 6. Statistical Test
+## 📐 6. Statistical Test
 
 핵심 지표인 CVR은 **Download / Click 형태의 비율 지표**이므로 두 집단의 비율 차이를 검정했습니다.
 
@@ -191,7 +191,7 @@ H1 : CVR_NAU > CVR_ARPU
 
 ---
 
-## 7. Results
+## 📊 7. Results
 
 ### Korea
 
@@ -241,7 +241,7 @@ CVR:
 주 검정인 Proportion Z-Test에서 `p < 0.05`로 나타나 귀무가설을 기각했으며, Fisher Exact Test에서도 동일한 결과를 확인했습니다.
 ---
 
-## 8. Interpretation
+## 💡 8. Interpretation
 
 두 국가 모두에서 신규 NAU 기반 운영 기준의 CVR이 기존 ARPU 기반 기준보다 높게 나타났습니다.
 
@@ -264,7 +264,7 @@ Download +137%
 
 ---
 
-## 9. Decision
+## ✅ 9. Decision
 
 A/B Test 결과를 기반으로 **NAU 비율을 반영한 신규 기준을 정식 운영 기준으로 전환**했습니다.
 
@@ -286,7 +286,7 @@ A/B Test 결과를 기반으로 **NAU 비율을 반영한 신규 기준을 정�
 
 ---
 
-## 10. Repository Information
+## 📂 10. Repository Information
 
 ### SQL
 
@@ -304,7 +304,7 @@ NAU 기반 운영 기준 산출을 위한 콘텐츠별 NAU, AU, Download, Revenu
 
 ---
 
-## Tech Stack
+## 🛠 Tech Stack
 
 `SQL` `Amazon Athena` `Python` `Pandas` `NumPy` `Statsmodels` `SciPy` `Matplotlib` `Seaborn`
 
