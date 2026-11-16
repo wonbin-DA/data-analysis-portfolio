@@ -75,6 +75,26 @@ flowchart LR
 
 다만 단순 진입 로그만으로 실제 콘텐츠 열람 여부를 판단하기에는 한계가 있었기 때문에, 최종 Engagement KPI에서는 **사용자의 능동적인 행동이 명확하게 나타나는 Click과 Download를 핵심 기준**으로 설정했습니다.
 
+### Initial KPI Proposal & Validation
+
+초기 KPI 설계 과정에서는 단순 AU를 세분화하여 사용자의 참여 수준을 구분할 수 있는지 검토했습니다.
+
+이를 위해 Discover 탭의 1Depth와 2Depth에서 발생하는 행동을 Light Action(Impression, Enter)과 Active Action(Click, Download)으로 구분하고, 행동 조합에 따른 사용자 세그먼트를 정의했습니다.
+
+초기에는 다음 세 가지 지표를 제안했습니다.
+
+- **1Depth Engagement**: 2Depth 진입 없이 1Depth에서 Download가 발생한 사용자
+- **Reader**: 2Depth 진입 후 Impression 또는 Enter 로그가 발생한 사용자
+- **Full Engagement**: 1Depth 또는 2Depth에서 Click이나 Download가 발생한 사용자
+
+정의한 조건을 바탕으로 실제 사용자 행동 로그를 집계하여 **2025년 W23, W24의 초기 Engagement 지표를 산출하고 고객사에 보고**했습니다.
+
+이후 지표의 해석 가능성과 지속적인 집계 및 운영 활용 여부를 검토했습니다.
+
+특히 Reader는 단순 진입 및 노출 로그만으로 실제 콘텐츠 열람 여부를 판단하기 어렵다는 한계가 있어 Scroll Depth 활용 여부를 추가로 검토했습니다. 1Depth Engagement 역시 앱아이콘 클릭과 다운로드를 활용하는 방안을 검토하는 등 지표별 행동 조건을 조정했습니다.
+
+이러한 검토를 거쳐 최종적으로는 Active Action을 중심으로 Full Engagement를 대표 KPI로 설정하고, 1Depth 및 2Depth Engagement를 세부 지표로 활용하는 구조로 정리했습니다.
+
 ---
 
 ## 🎯 3. Engagement KPI Definition
